@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIL Music Picker - Filters</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">UIL Music Picker</div>
+            <div class="navbar-menu">
+                <a href="MusicPicker.html" class="navbar-item active">Filters</a>
+                <a href="About_Page.HTML" class="navbar-item">About</a>
+                <a href="https://www.uiltexas.org/pml/" target="_blank" class="navbar-item">Source Website</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="title">Filters</h1>
+        <p class="description">
+            Use the text-boxes and the grade counter to sort out attributes of pieces that you desire.
+        </p>
+        
+        <div class="card">
+            <div class="card-content">
+                <div class="form-group">
+                    <label for="csv-upload">Upload CSV File</label>
+                    <input type="file" id="csv-upload" accept=".csv" class="form-control">
+                </div>
+                
+                <h2 class="subtitle">Sorting Menus</h2>
+                
+                <div class="filter-grid">
+                    <div class="form-group">
+                        <label for="group-performing">Group Performing:</label>
+                        <input type="text" id="group-performing" placeholder="Band" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" placeholder="Enter title" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="composer">Composer:</label>
+                        <input type="text" id="composer" placeholder="Enter composer name" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="arranger">Arranger:</label>
+                        <input type="text" id="arranger" placeholder="Enter arranger name" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="grade">Grade:</label>
+                        <input type="number" id="grade" min="1" max="5" placeholder="1" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button id="filter-btn" class="btn btn-primary">Filter</button>
+                    <button id="reset-btn" class="btn btn-outline">Reset</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="results-container" class="table-container" style="display: none;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="select-column">Select</th>
+                        <th>Code</th>
+                        <th>Event Name</th>
+                        <th>Title</th>
+                        <th>Composer</th>
+                        <th>Arranger</th>
+                        <th>Publisher</th>
+                        <th>Grade</th>
+                        <th>Specification</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body">
+                    <!-- Results will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    
+<script src="script.js"></script>
+</body>
+</html>
