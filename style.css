@@ -65,7 +65,7 @@
 
         /* Navigation */
         .navbar {
-            background: linear-gradient(to right, var(--primary-900), var(--primary-800));
+            background: linear-gradient(to right, var(--secondary-900), var(--primary-800));
             color: var(--white);
             padding: 1rem 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -386,7 +386,7 @@
 
         /* Navigation */
         .navbar {
-            background: linear-gradient(to right, var(--primary-900), var(--primary-800));
+            background: linear-gradient(to right, var(--secondary-900), var(--primary-800));
             color: var(--white);
             padding: 1rem 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

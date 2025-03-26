@@ -14,7 +14,7 @@
             <div class="navbar-brand">UIL Music Picker</div>
             <div class="navbar-menu">
                 <a href="MusicPicker.html" class="navbar-item active">Filters</a>
-                <a href="About_Page.HTML" class="navbar-item">About</a>
+                <a href="About_Page.html" class="navbar-item">About</a>
                 <a href="https://www.uiltexas.org/pml/" target="_blank" class="navbar-item">Source Website</a>
             </div>
         </div>
@@ -89,7 +89,35 @@
                 </tbody>
             </table>
         </div>
-    
+        <h2 class="title">Recommendations</h2>
+        <p class="description">
+            If you would like recommendations for pieces, use the checkbox on the far left to recommend pieces like the one checked.
+        </p>
+        
+        <div id="recommendations-container" class="table-container" style="display: none;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Event Name</th>
+                        <th>Title</th>
+                        <th>Composer</th>
+                        <th>Arranger</th>
+                        <th>Publisher</th>
+                        <th>Grade</th>
+                        <th>Specification</th>
+                    </tr>
+                </thead>
+                <tbody id="recommendations-body">
+                    <!-- Recommendations will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <p id="no-recommendations" class="empty-message">
+            Select a piece to see recommendations.
+        </p>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>
